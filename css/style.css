@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/static/Inter-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+  font-weight: 800;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+}
+
+.page_wrapper {
+  padding: 2em 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header > .header_logo > .header_title {
+  position: absolute;
+  left: -999999999999999999px;
+}
+.header > .header_nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 2em 1.8em;
+  font-size: 1.2em;
+  background: #fffdfa;
+}
+.header > .header_nav a {
+  color: #00001a;
+}
+.header > .header_nav .header_nav_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+}
+.header > .header_nav .header_nav_content .nav_link > a {
+  padding: .5em 0;
+}
+.header > .header_nav .nav_menu_close {
+  margin-bottom: 4em;
+  overflow: hidden;
+}
+.header > .header_nav .nav_menu_close .close_btn {
+  float: right;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,60 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="page_wrapper">
+    <header class="header">
+      <div class="header_logo">
+        <img src="assets/images/logo.svg" alt="">
+        <h1 class="header_title">News</h1>
+      </div>
+      <nav class="header_nav">
+        <ul class="header_nav_content">
+          <li class="nav_menu_close">
+            <button class="close_btn" aria-label="close" type="button"><img src="assets/images/icon-menu-close.svg" alt="icon menu close"></button>
+          </li>
+          <li class="nav_link"><a href="">Home</a></li>
+          <li class="nav_link"><a href="">New</a></li>
+          <li class="nav_link"><a href="">Popular</a></li>
+          <li class="nav_link"><a href="">Trending</a></li>
+          <li class="nav_link"><a href="">Categories</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main_primary">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="" aria-hidden="true">
+        <h2>The Bright Future of Web 3.0?</h2>
+        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of
+          the
+          people.
+          But is it really fulfilling its promise?</p>
+        <a href="">Read more</a>
+      </div>
+      <div class="main_new">
+        <h2>New</h2>
+        <p>
+          <span>Hydrogen VS Electric Cars</span>
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+        <p>
+          <span>The Downsides of AI Artistry</span>
+          What are the possible adverse effects of on-demand AI image generation?
+        </p>
+        <p>
+          <span>Is VC Funding Drying Up?</span>
+          Private funding by VC firms is down 50% YOY. We take a look at what that means.
+        </p>
+      </div>
+      <div class="main_ranking">
+        <ol>
+          <li>
+            <p>01</p>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </li>
+          <li>
+            <p>02</p>
+            <h3>Top 10 Laptops of 2022</h3>
+            Our best picks for various needs and budgets.
+          </li>
+          <li>
+            <p>03</p>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </li>
+        </ol>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
   </div>
 </body>
+
 </html>
