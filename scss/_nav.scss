@@ -1,0 +1,54 @@
+$md: map-get($breakpoints, 'md');
+
+.nav {
+    display: none;
+
+    @media (min-width: $md) {
+        display: block;
+    }
+
+    ul {
+        height: 100%;
+
+        li {
+            height: 100%;
+
+            a {
+                display: block;
+                height: 100%;
+                font-weight: 600;
+                line-height: 3rem;
+                color: $dark-grayish-blue;
+
+                &:hover {
+                    color: $sof-red;
+                }
+            }
+        }
+
+        @media (min-width: $md) {
+                display: flex;
+                gap: $gap-between-item;
+        }
+    }
+}
+
+.nav-toggle {
+    width: $toggle-width;
+    height: $toggle-height;
+
+    background: {
+        image: url('../assets/images/icon-menu.svg');
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+    }
+
+    @media (min-width: $md) {
+        display: none;
+    }
+}
+
+.nav-toggle.trigger {
+    background-image: url('../assets/images/icon-menu-close.svg');
+}

@@ -1,0 +1,303 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* inter-regular */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: regular;
+  src: url("//lib.baomitu.com/fonts/inter/inter-regular.eot"); /* IE9 Compat Modes */
+  src: local("Inter"), local("Inter-Normal"), url("//lib.baomitu.com/fonts/inter/inter-regular.eot?#iefix") format("embedded-opentype"), url("//lib.baomitu.com/fonts/inter/inter-regular.woff2") format("woff2"), url("//lib.baomitu.com/fonts/inter/inter-regular.woff") format("woff"), url("//lib.baomitu.com/fonts/inter/inter-regular.ttf") format("truetype"), url("//lib.baomitu.com/fonts/inter/inter-regular.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-700 */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//lib.baomitu.com/fonts/inter/inter-700.eot"); /* IE9 Compat Modes */
+  src: local("Inter"), local("Inter-Normal"), url("//lib.baomitu.com/fonts/inter/inter-700.eot?#iefix") format("embedded-opentype"), url("//lib.baomitu.com/fonts/inter/inter-700.woff2") format("woff2"), url("//lib.baomitu.com/fonts/inter/inter-700.woff") format("woff"), url("//lib.baomitu.com/fonts/inter/inter-700.ttf") format("truetype"), url("//lib.baomitu.com/fonts/inter/inter-700.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-800 */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("//lib.baomitu.com/fonts/inter/inter-800.eot"); /* IE9 Compat Modes */
+  src: local("Inter"), local("Inter-Normal"), url("//lib.baomitu.com/fonts/inter/inter-800.eot?#iefix") format("embedded-opentype"), url("//lib.baomitu.com/fonts/inter/inter-800.woff2") format("woff2"), url("//lib.baomitu.com/fonts/inter/inter-800.woff") format("woff"), url("//lib.baomitu.com/fonts/inter/inter-800.ttf") format("truetype"), url("//lib.baomitu.com/fonts/inter/inter-800.svg#Inter") format("svg"); /* Legacy iOS */
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  color: hsl(236deg, 13%, 42%);
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 4rem;
+  color: hsl(240deg, 100%, 5%);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: none;
+}
+@media (min-width: 560px) {
+  .nav {
+    display: block;
+  }
+}
+.nav ul {
+  height: 100%;
+}
+.nav ul li {
+  height: 100%;
+}
+.nav ul li a {
+  display: block;
+  height: 100%;
+  font-weight: 600;
+  line-height: 3rem;
+  color: hsl(236deg, 13%, 42%);
+}
+.nav ul li a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+@media (min-width: 560px) {
+  .nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-toggle {
+  width: 4rem;
+  height: 3rem;
+  background-image: url("../assets/images/icon-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 560px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.nav-toggle.trigger {
+  background-image: url("../assets/images/icon-menu-close.svg");
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+header .logo .logo-img img {
+  height: 3rem;
+  vertical-align: top;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  main .first {
+    grid-column: 1;
+  }
+}
+main .first .section-img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+main .first .section-content {
+  display: flex;
+  flex-flow: column;
+  gap: 4.6rem;
+}
+@media (min-width: 680px) {
+  main .first .section-content {
+    flex-flow: row;
+  }
+}
+main .first .section-content .title {
+  line-height: 5rem;
+}
+main .first .section-content .content .more-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  color: hsl(36deg, 100%, 99%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: hsl(5deg, 85%, 63%);
+}
+main .first .section-content .content .more-btn:hover {
+  color: hsl(36deg, 100%, 99%);
+  background: hsl(240deg, 100%, 5%);
+}
+main .second {
+  padding: 2rem 1.5rem;
+  background: hsl(240deg, 100%, 5%);
+}
+@media (min-width: 1024px) {
+  main .second {
+    grid-column: 2;
+  }
+}
+main .second .title {
+  color: hsl(35deg, 77%, 62%);
+}
+main .second .content .item {
+  padding: 3rem 0;
+  border-bottom-color: hsl(236deg, 13%, 42%);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: hsl(233deg, 8%, 79%);
+}
+main .second .content .item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+main .second .content .item a {
+  color: hsl(36deg, 100%, 99%);
+}
+main .second .content .item a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+@media (min-width: 1024px) {
+  main .third {
+    grid-column: 1/3;
+  }
+}
+main .third .content {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  main .third .content {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+main .third .content .item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2rem;
+}
+main .third .content .item .item-content h2 {
+  font-size: 3rem;
+  color: hsl(233deg, 8%, 79%);
+}
+main .third .content .item .item-content h3 {
+  font-size: 1.6rem;
+  color: hsl(240deg, 100%, 5%);
+}
+main .third .content .item .item-content h3:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

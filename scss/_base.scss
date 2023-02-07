@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    font: {
+        family: 'Inter', sans-serif;
+        weight: 400;
+        size: $para-font-size;
+    }
+
+    line-height: $para-line-height;
+    color: $para-color;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font: {
+        size: 3.8rem;
+        weight: 800;
+    }
+
+    line-height: 4rem;
+    color: $very-dark-blue;
+}
+
+h3 {
+    font: {
+        size: 2rem;
+        weight: 700;
+    };
+
+    line-height: 4rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}

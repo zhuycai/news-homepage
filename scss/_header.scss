@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+
+    .logo {
+        .logo-img {
+            img {
+                height: $toggle-height;
+                vertical-align: top;
+            }
+        }
+    }
+}

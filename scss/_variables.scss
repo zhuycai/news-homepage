@@ -1,0 +1,42 @@
+// colors
+$soft-orange: hsl(35, 77%, 62%);
+$sof-red: hsl(5, 85%, 63%);
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+// colors
+
+// breakpoints
+$breakpoints: (
+    'sm': 375px,
+    'md': 560px,
+    'lg': 680px,
+    'xl': 1024px
+);
+// breakpoints
+
+// para-color
+$para-color: $dark-grayish-blue;
+// para-color
+
+// typography
+$para-font-size: 1.5rem;
+// typography
+
+// nav toggle size
+$toggle-width: 4rem;
+$toggle-height: 3rem;
+// nav toggle size
+
+// gap-between-section
+$gap-between-sec: 4rem;
+// gap-between-section
+
+// gap-between-item
+$gap-between-item: 2rem;
+// gap-between-item
+
+// paragraph line height
+$para-line-height: 2.6rem;
+// paragraph lineheight
