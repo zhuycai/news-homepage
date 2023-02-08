@@ -85,6 +85,7 @@ table {
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -117,26 +118,67 @@ a {
   text-decoration: none;
 }
 
+.mask::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: hsl(240deg, 100%, 5%);
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+  z-index: 1;
+}
+
+.mask.on::after {
+  opacity: 0.5;
+}
+
 .container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   padding: 0 1.5rem;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .nav {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: -70%;
+  width: 70%;
+  height: 100%;
+  padding: 15rem 4rem;
+  background: hsl(36deg, 100%, 99%);
+  transition: right ease-in-out 0.5s;
+  z-index: 99;
 }
 @media (min-width: 560px) {
   .nav {
-    display: block;
+    position: relative;
+    right: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
   }
 }
+.nav.slide-in {
+  right: 0;
+}
 .nav ul {
+  display: flex;
+  flex-flow: column;
   height: 100%;
 }
 .nav ul li {
-  height: 100%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 560px) {
+  .nav ul li {
+    margin-bottom: 0;
+  }
 }
 .nav ul li a {
   display: block;
@@ -150,27 +192,41 @@ a {
 }
 @media (min-width: 560px) {
   .nav ul {
-    display: flex;
+    flex-flow: row;
     gap: 2rem;
   }
 }
 
-.nav-toggle {
+.nav-toggle,
+.nav-collapse {
+  display: block;
   width: 4rem;
   height: 3rem;
-  background-image: url("../assets/images/icon-menu.svg");
+  cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.nav-collapse {
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+  background-image: url("../assets/images/icon-menu-close.svg");
+}
+@media (min-width: 560px) {
+  .nav-collapse {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  background-image: url("../assets/images/icon-menu.svg");
 }
 @media (min-width: 560px) {
   .nav-toggle {
     display: none;
   }
-}
-
-.nav-toggle.trigger {
-  background-image: url("../assets/images/icon-menu-close.svg");
 }
 
 header {
@@ -192,6 +248,8 @@ main {
 @media (min-width: 1024px) {
   main {
     grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+    row-gap: 8rem;
   }
 }
 @media (min-width: 1024px) {

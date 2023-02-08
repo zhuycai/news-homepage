@@ -1,17 +1,39 @@
 $md: map-get($breakpoints, 'md');
 
 .nav {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: -70%;
+    width: 70%;
+    height: 100%;
+    padding: 15rem 4rem;
+    background: $off-white;
+    transition: right ease-in-out 0.5s;
+    z-index: 99;
 
     @media (min-width: $md) {
-        display: block;
+        position: relative;
+        right: 0;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+
+    &.slide-in {
+        right: 0;
     }
 
     ul {
+        display: flex;
+        flex-flow: column;
         height: 100%;
 
         li {
-            height: 100%;
+            margin-bottom: $gap-between-item;
+
+            @media (min-width: $md) {
+                margin-bottom: 0;
+            }
 
             a {
                 display: block;
@@ -27,29 +49,43 @@ $md: map-get($breakpoints, 'md');
         }
 
         @media (min-width: $md) {
-                display: flex;
-                gap: $gap-between-item;
+            flex-flow: row;
+            gap: $gap-between-item;
         }
     }
 }
 
-.nav-toggle {
+
+
+.nav-toggle,
+.nav-collapse {
     display: block;
     width: $toggle-width;
     height: $toggle-height;
+    cursor: pointer;
 
     background: {
-        image: url('../assets/images/icon-menu.svg');
         position: center;
         repeat: no-repeat;
         size: contain;
     }
+}
+
+.nav-collapse {
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    background-image: url('../assets/images/icon-menu-close.svg');
 
     @media (min-width: $md) {
         display: none;
     }
 }
 
-.nav-toggle.trigger {
-    background-image: url('../assets/images/icon-menu-close.svg');
+.nav-toggle {
+    background-image: url('../assets/images/icon-menu.svg');
+    
+    @media (min-width: $md) {
+        display: none;
+    }
 }

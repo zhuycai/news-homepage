@@ -7,6 +7,7 @@
 }
 
 body {
+    position: relative;
     font: {
         family: 'Inter', sans-serif;
         weight: 400;
@@ -46,4 +47,21 @@ img {
 
 a {
     text-decoration: none;
+}
+
+.mask::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: $very-dark-blue;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+    z-index: 1;
+}
+
+.mask.on::after {
+    opacity: 0.5;
 }

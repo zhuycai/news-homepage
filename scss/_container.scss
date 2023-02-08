@@ -1,9 +1,10 @@
-// - Mobile: 375px
-// - Desktop: 1440px
+$xxl: map-get($map: $breakpoints, $key: 'xxl');
 
 .container {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: $xxl;
     padding: 0 1.5rem;
     margin: 0 auto;
+    overflow: hidden;
 }

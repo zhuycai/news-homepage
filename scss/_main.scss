@@ -9,6 +9,8 @@ main {
 
     @media (min-width: $xl) {
         grid-template-columns: 2fr 1fr;
+        column-gap: calc($gap-between-item * 2);
+        row-gap: calc($gap-between-sec * 2);
     }
 
     .first {
